@@ -102,7 +102,7 @@ void ifspecial(Node* root, Node* node)
         Node* p = node, *p1, *p2;
         findparents(root, p, &p1, &p2);
         p1->left = node->left;
-        p1->right = node->right;
+        p2->right = node->right;
         delete p;
     }
     if (root->right == node) ifspecial(root, node->right);
